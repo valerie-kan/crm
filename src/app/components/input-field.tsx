@@ -19,7 +19,7 @@ export default function InputField({ label, id, ...rest }: InputFieldProps) {
       <Field
         id={id}
         {...rest}
-        className="p-3 h-11 text-sm rounded border border-gray-300 shadow"
+        className="p-3 h-11 text-sm rounded border border-gray-300 shadow color-gray-500"
       />
     </div>
   );
