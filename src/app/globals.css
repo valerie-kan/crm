@@ -10,4 +10,5 @@
 
 body {
   background: #FAFAFA;
+  font-family: var(--second-family), sans-serif;
 }

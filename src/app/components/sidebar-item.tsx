@@ -25,7 +25,7 @@ export default function SideBarItem({
         href={path}
         className={clsx(
           'flex items-center ml-6 mr-1 w-full gap-3.5',
-          active && 'after:w-1, after:h-full, after:bg-purple-200',
+          active && 'after:w-1, after:h-full, after:bg-purple-200 rounded-sm',
         )}
       >
         <Image width={18} height={18} src={src} alt={alt} />

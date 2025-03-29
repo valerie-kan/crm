@@ -5,7 +5,6 @@ import SideBar from '@/app/components/side-bar';
 export default function Home() {
   return (
     <main>
-      {/*<h1>Home page</h1>*/}
       <SideBar />
       {/*<StatusLabel status={Status.Active}>Active</StatusLabel>*/}
       {/*<StatusLabel status={Status.NotActive}>Not Active</StatusLabel>*/}
