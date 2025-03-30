@@ -19,21 +19,22 @@ export default function SideBar({}: SideBarProps) {
           height={25}
           src="/icons/logo.svg"
           alt="logo"
+          priority
         />
         <ul className="flex flex-col gap-7">
           <SideBarItem
             src="/icons/dashboard.svg"
             alt="Dashbord icon"
-            path="/dashboard"
-            active={pathname === '/dashboard'}
+            path="/pages/dashboard"
+            active={pathname === '/pages/dashboard'}
           >
             Dashboard
           </SideBarItem>
           <SideBarItem
             src="/icons/briefcase.svg"
             alt="Companies icon"
-            path="/companies"
-            active={pathname === '/companies'}
+            path="/pages/companies"
+            active={pathname === '/pages/companies'}
           >
             Companies
           </SideBarItem>
