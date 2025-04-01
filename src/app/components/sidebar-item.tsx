@@ -5,7 +5,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 
 export interface SideBarItemProps {
-  active: boolean;
+  active?: boolean;
   path: string;
   src: string;
   alt: string;

@@ -4,11 +4,17 @@ import React from 'react';
 import Image from 'next/image';
 import SideBarItem from '@/app/components/sidebar-item';
 import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 export interface SideBarProps {}
 
 export default function SideBar({}: SideBarProps) {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleExitClick = () => {
+    router.push('/');
+  };
 
   return (
     <aside className="w-60 h-screen bg-gray-900 fixed z-10">
@@ -25,21 +31,24 @@ export default function SideBar({}: SideBarProps) {
           <SideBarItem
             src="/icons/dashboard.svg"
             alt="Dashbord icon"
-            path="/pages/dashboard"
-            active={pathname === '/pages/dashboard'}
+            path="/dashboard"
+            active={pathname === '/dashboard'}
           >
             Dashboard
           </SideBarItem>
           <SideBarItem
             src="/icons/briefcase.svg"
             alt="Companies icon"
-            path="/pages/companies"
-            active={pathname === '/pages/companies'}
+            path="/companies"
+            active={pathname === '/companies'}
           >
             Companies
           </SideBarItem>
         </ul>
-        <button className="flex items-center gap-2 mx-auto mt-auto pb-10">
+        <button
+          className="flex items-center gap-2 mx-auto mt-auto pb-10"
+          onClick={handleExitClick}
+        >
           <Image width={18} height={18} src="/icons/exit.svg" alt="Exit icon" />{' '}
           <span className="font-medium text-base text-zinc-50">Exit</span>
         </button>
